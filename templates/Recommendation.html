@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Music Recommendation System - Results</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+   <header>
+    <nav>
+      <div class="logo">
+        <a href="/">BeatBuddy</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+<body>
+    <h1>Music Recommendations</h1>
+    <div class="container">
+        <h2>Top 5 songs of artist {{ artist_name }} and genre {{ genre_name }} </h2>
+
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Song Name</th>
+                    <th>Cosine Similarity Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for song in similar_songs %}
+                <tr>
+                    <td>{{ song[0] }}</td>
+                    <td>{{ song[1]|round(2) }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <br>
+
+
+  <footer>
+    <p>&copy; Music Recommender System</p>
+     <p> Created by <span> Yash & Humzah </span> | All @rights reserved to MusicCloud 2023 </p>
+    </footer>
+</body>
+</html>

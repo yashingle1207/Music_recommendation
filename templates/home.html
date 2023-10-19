@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <title>BeatBuddy Recommender </title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+  </head>
+  <header>
+  <nav>
+    <div class="logo">
+      <a href="/">BeatBuddy</a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About us</a></li>
+      <li><a href="/contact">Contact us</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <body>
+  <div class="form-container">
+  <div class="form-card">
+    <h1>Music Recommendation System</h1>
+        <form action="/recommend" method="POST">
+            <label for="artist_name">Enter the name of an artist:</label>
+            <input type="text" id="artist_name" name="artist_name" required>
+            <label for="genre_name">Enter the name of a genre:</label>
+            <input type="text" id="genre_name" name="genre_name" required>
+            <input type="submit" value="Get Recommendations">
+        </form>
+  </div>
+</div>
+
+  <footer>
+    <p>&copy; Music Recommender System</p>
+     <p> Created by <span> Yash & Humzah </span> | All @rights reserved to MusicCloud 2023 </p>
+    </footer>
+  </body>
+</html>
+

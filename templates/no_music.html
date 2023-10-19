@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>No Music Found</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<header>
+  <nav>
+    <div class="logo">
+      <a href="/">BeatBuddy</a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About us</a></li>
+      <li><a href="/contact">Contact us</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+<body>
+	<br>
+	<br>
+	<h1>Opps...!!</h1>
+	<br>
+
+	<h1>No songs found for the given artist {{ artist_name }} and genre {{ genre_name }} combination.</h1>
+	<br>
+	<h1>Please try again with suitable combination.</h1>
+
+
+
+
+  <footer>
+    <p>&copy; Music Recommender System</p>
+     <p> Created by <span> Yash & Humzah </span> | All @rights reserved to MusicCloud 2023 </p>
+    </footer>
+
+
+</body>
+</html>
+
