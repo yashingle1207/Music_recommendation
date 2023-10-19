@@ -7,7 +7,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 app = Flask(__name__)
 
 # Load the dataset
-music_data = pd.read_csv("Dataset/music.csv")
+music_data = pd.read_csv("music.csv")
 
 # Clean the data by filling missing values with 0
 music_data = music_data.fillna(0)
